@@ -1,0 +1,13 @@
+from imblearn.over_sampling import SMOTE
+
+# Run the prep_data function
+X, y = prep_data(df)
+
+# Define the resampling method
+method = SMOTE()
+
+# Create the resampled feature set
+X_resampled, y_resampled = method.fit_resample(X, y)
+
+# Plot the resampled data
+plot_data(X_resampled, y_resampled)
